@@ -2,26 +2,26 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Righteous&size=40&duration=4000&pause=1000&color=0098D1&center=true&vCenter=true&random=false&width=435&lines=🔎+Estudos+de+Java!!!;" />
 </h1>
 
-<p align="center">
-  <img src="https://www.qulix.com/wp-content/uploads/2021/01/cat.gif" alt="Java Logo">
-</p>
+<h2 align="center">
+  <img src="https://media1.tenor.com/m/xv-8Q_TJne4AAAAC/java.gif"/>
+</h2>
 
 </br> 
 
-<p align="center" font-size:17px">
+<p align="center">
   ❗ Este é um repositório usado para compartilhar meus estudos iniciais em Java. Ele será atualizado constantemente. 
 </p>
 
 
 </br>
 
-<h1 style="color:blue">🎓 Introdução à Tecnologia de Objetos </h1>
+<h1>🎓 Introdução à Tecnologia de Objetos </h1>
 
 Hoje, como a demanda por software novo e mais poderoso está aumentando, construir softwares de maneira rápida, correta e econômica continua a ser um objetivo indefinido. Objetos ou, mais precisamente, as classes de onde os objetos vêm são essencialmente componentes reutilizáveis de software. Há objetos data, objetos data/hora, objetos áudio, objetos vídeo, objetos automóvel, objetos pessoas etc. Quase qualquer substantivo pode ser razoavelmente representado como um objeto de software em termos dos atributos (por exemplo, nome, cor e tamanho) e comportamentos (por exemplo, calcular, mover e comunicar). Grupos de desenvolvimento de software podem usar uma abordagem modular de projeto e implementação orientados a objetos para que sejam muito mais produtivos do que com as técnicas anteriormente populares como “programação estruturada” — programas orientados a objetos são muitas vezes mais fáceis de entender, corrigir e modificar.
 
 </br>
 
-<h2 style="color:blue">🚘 O Automóvel como um Objeto </h2>
+<h2>🚘 O Automóvel como um Objeto </h2>
 
 - **Analogia com Carro:**
   - Para facilitar a compreensão de objetos e seus conteúdos, vamos usar uma analogia com um carro.
@@ -43,7 +43,7 @@ Hoje, como a demanda por software novo e mais poderoso está aumentando, constru
 
 </br> 
 
-<h2 style="color:blue">🔗 Métodos e Classes</h2>
+<h2>🔗 Métodos e Classes</h2>
 
 - **Classes:**
   - Em Java, as classes são a base da programação orientada a objetos (POO).
@@ -65,7 +65,7 @@ Hoje, como a demanda por software novo e mais poderoso está aumentando, constru
   - Promove a organização do código, facilitando a manutenção e a extensão do sistema.
 
 
-<h2 style="color:blue"> 💻 Exercícios</h2>
+<h2> 💻 Exercícios</h2>
 
 ### ➡️ Pasta "Classes"
 
@@ -91,7 +91,7 @@ O arquivo `Program.java` é um programa Java que calcula a área de dois triâng
 
 - O programa é estruturado em pacotes: o pacote `application` contém a classe `Program`, e o pacote `entities` contém a classe `Triangle`.
 
-- Esse foi um exercício feito para coloar em prática o conceito de `Classes`  e `Métodos` .
+- Esse foi um exercício feito para colocar em prática os conceitos de `Classes`  e `Métodos` .
 
  ---
 
