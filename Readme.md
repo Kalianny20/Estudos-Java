@@ -65,7 +65,7 @@ Hoje, como a demanda por software novo e mais poderoso está aumentando, constru
   - Promove a organização do código, facilitando a manutenção e a extensão do sistema.
 
 
-<h2> 💻 Exercícios</h2>
+<h2> 💻 Exercício</h2>
 
 ### ➡️ Pasta "Classes"
 
@@ -94,4 +94,75 @@ O arquivo `Program.java` é um programa Java que calcula a área de dois triâng
 - Esse foi um exercício feito para colocar em prática os conceitos de `Classes`  e `Métodos` .
 
  ---
+## 🔗 Parâmetros e Argumentos
+
+Em orientação a objetos, "parâmetros" e "argumentos" são termos frequentemente usados em conjunto, mas referem-se a conceitos diferentes.
+
+1. **Parâmetros**: São variáveis definidas na declaração de um método ou função. Eles servem como marcadores de posição para os valores que serão passados quando o método ou função for chamado. Os parâmetros definem quais tipos de valores uma função espera receber e como esses valores serão usados dentro dela.
+
+   Exemplo:
+   ```java
+   public class Exemplo {
+       // Método que recebe dois parâmetros e retorna a soma
+       public static int soma(int a, int b) {
+           return a + b;
+       }
+
+       public static void main(String[] args) {
+           // Chamando o método soma e passando os argumentos 3 e 5
+           int resultado = soma(3, 5);
+           System.out.println("Resultado da soma: " + resultado);
+       }
+   }
+   ```
+
+   Neste exemplo, temos um método chamado `soma` que recebe dois parâmetros `a` e `b`, e retorna a soma desses dois parâmetros. No método `main`, estamos chamando o método `soma` e passando os argumentos `3` e `5`. Quando o método é chamado com esses argumentos, `a` será igual a `3` e `b` será igual a `5`. O resultado da soma será impresso no console.
+
+3. **Argumentos**: São os valores reais que são passados para uma função ou método quando ele é chamado. Eles preenchem os parâmetros definidos na declaração da função. Em outras palavras, são os valores que você fornece para que a função os utilize durante sua execução.
+
+   Exemplo:
+   ```java
+   public class Exemplo {
+       // Método que recebe dois parâmetros e retorna a soma
+       public static int soma(int a, int b) {
+           return a + b;
+       }
+
+       public static void main(String[] args) {
+           // Chamando o método soma e passando os argumentos 3 e 5
+           int resultado = soma(3, 5);
+           System.out.println("Resultado da soma: " + resultado);
+       }
+   }
+   ```
+
+   Neste exemplo, temos um método chamado `soma` que recebe dois parâmetros `a` e `b`, e retorna a soma desses dois parâmetros. No método `main`, estamos chamando o método `soma` e passando os argumentos `3` e `5`. Quando o método é chamado com esses argumentos, `a` será igual a `3` e `b` será igual a `5`. O resultado da soma será impresso no console.
+
+Resumindo, os parâmetros são as variáveis na declaração de uma função que definem quais valores ela espera receber, enquanto os argumentos são os valores reais fornecidos quando a função é chamada para preencher esses parâmetros.
+
+ 
+<h2> 💻 Exercício</h2>
+
+### ➡️ Pasta "Classes2"
+
+Esta pasta contém o seguinte programa Java:
+
+### Programa de Controle de Produtos
+
+1. **Classe Program:**
+   - Esta é a classe principal do programa, contendo o método `main` como ponto de entrada.
+   - No método `main`, as seguintes operações são realizadas:
+     - Configuração do local padrão para formatação de números decimais para o estilo dos EUA.
+     - Criação de um objeto `Scanner` para receber entrada do usuário.
+     - Criação de um objeto `Product` para representar o produto inserido pelo usuário.
+     - Solicitação ao usuário para inserir os dados do produto, incluindo nome, preço e quantidade em estoque.
+     - Exibição dos detalhes do produto utilizando o método `toString()` da classe `Product`.
+     - Fechamento do objeto `Scanner` para liberar os recursos.
+
+2. **Classe Product:**
+   - Esta classe representa um produto com três atributos: `name` (nome), `price` (preço) e `quantity` (quantidade em estoque).
+   - Possui métodos para calcular o valor total em estoque do produto (`totalValueInStock()`), adicionar produtos ao estoque (`addProducts()`) e remover produtos do estoque (`removeProducts()`).
+   - O método `toString()` é sobrescrito para fornecer uma representação personalizada do objeto `Product`, exibindo o nome, preço, quantidade em estoque e o valor total em estoque formatado.
+
+O programa é organizado em dois arquivos Java, onde a classe `Program` está no pacote `application` e a classe `Product` está no pacote `entities`.
 
