@@ -9,13 +9,15 @@
 </br> 
 
 <p align="center">
-  ❗ Este é um repositório usado para compartilhar meus estudos iniciais em Java. Ele será atualizado constantemente. 
+  🚀 Bem-vindo ao meu repositório dedicado aos estudos em Orientação a Objetos com Java! Aqui, compartilho minha jornada de aprendizado por meio de um desafio de 100 dias, onde me comprometo a programar diariamente e aprofundar meus conhecimentos em POO. Este espaço será constantemente atualizado com novos projetos, exemplos e insights, então fique à vontade para acompanhar minha evolução. 💻✨
 </p>
 
 
 </br>
 
-<h1>🎓 Introdução à Tecnologia de Objetos </h1>
+<h1 align="center"> 🍀 Dia 1 </h1>
+
+<h2>🎓 Introdução à Tecnologia de Objetos </h2>
 
 Hoje, como a demanda por software novo e mais poderoso está aumentando, construir softwares de maneira rápida, correta e econômica continua a ser um objetivo indefinido. Objetos ou, mais precisamente, as classes de onde os objetos vêm são essencialmente componentes reutilizáveis de software. Há objetos data, objetos data/hora, objetos áudio, objetos vídeo, objetos automóvel, objetos pessoas etc. Quase qualquer substantivo pode ser razoavelmente representado como um objeto de software em termos dos atributos (por exemplo, nome, cor e tamanho) e comportamentos (por exemplo, calcular, mover e comunicar). Grupos de desenvolvimento de software podem usar uma abordagem modular de projeto e implementação orientados a objetos para que sejam muito mais produtivos do que com as técnicas anteriormente populares como “programação estruturada” — programas orientados a objetos são muitas vezes mais fáceis de entender, corrigir e modificar.
 
@@ -94,6 +96,10 @@ O arquivo `Program.java` é um programa Java que calcula a área de dois triâng
 - Esse foi um exercício feito para colocar em prática os conceitos de `Classes`  e `Métodos` .
 
  ---
+</br>
+ 
+<h1 align="center"> 🍀 Dia 2 </h1>
+
 ## 🔗 Parâmetros e Argumentos
 
 Em orientação a objetos, "parâmetros" e "argumentos" são termos frequentemente usados em conjunto, mas referem-se a conceitos diferentes.
