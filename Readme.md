@@ -172,3 +172,42 @@ Esta pasta contém o seguinte programa Java:
 
 O programa é organizado em dois arquivos Java, onde a classe `Program` está no pacote `application` e a classe `Product` está no pacote `entities`.
 
+</br>
+
+## 🔗 Método toString()
+- O método `toString` em Java é essencial para criar representações textuais de objetos.
+- Toda classe em Java é automaticamente uma filha da classe `Object`, que possui o método `toString`.
+- A implementação padrão de `toString` em `Object` retorna "nomeDaClasse@endereçoNaMemória".
+- É possível personalizar a representação textual de um objeto ao sobrescrever o método `toString`.
+- Por exemplo, ao sobrescrever `toString` na classe `Pessoa`, podemos retornar uma representação que inclui CPF e nome.
+- Isso oferece flexibilidade para controlar como os objetos são representados textualmente.
+- `toString` facilita a depuração e a compreensão do código, fornecendo uma representação legível do objeto em forma de texto.
+
+    Exemplo:
+    ```java
+    public class Pessoa {
+    private String nome;
+    private String cpf;
+
+    // Construtor
+    public Pessoa(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+    }
+
+    // Sobrescrevendo o método toString para personalizar a representação textual
+    @Override
+    public String toString() {
+        return "Pessoa{ nome='" + nome + "', cpf='" + cpf + "' }";
+    }
+
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa("João", "123.456.789-10");
+        
+        // Imprimindo a instância da classe Pessoa
+        System.out.println(pessoa);
+    }
+}
+
+
+Neste exemplo, a classe `Pessoa` possui dois atributos: `nome` e `cpf`. O método `toString` é sobrescrito para retornar uma representação personalizada da pessoa, incluindo o nome e o CPF. Ao criar uma instância da classe `Pessoa` e imprimir essa instância, o método `toString` personalizado é chamado automaticamente, fornecendo uma representação textual mais útil da pessoa.
