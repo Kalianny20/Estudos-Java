@@ -211,3 +211,68 @@ O programa é organizado em dois arquivos Java, onde a classe `Program` está no
 
 
 Neste exemplo, a classe `Pessoa` possui dois atributos: `nome` e `cpf`. O método `toString` é sobrescrito para retornar uma representação personalizada da pessoa, incluindo o nome e o CPF. Ao criar uma instância da classe `Pessoa` e imprimir essa instância, o método `toString` personalizado é chamado automaticamente, fornecendo uma representação textual mais útil da pessoa.
+
+---
+</br>
+ 
+<h1 align="center"> 🍀 Dia 3 </h1>
+
+<h2> 💻 Exercícios</h2>
+
+### ➡️ Pasta Rectangle
+
+Nessa aula, foram abordados:
+
+1. **Classes e Objetos**: A definição da classe `Rectangle` representa um modelo para criar objetos retângulo. A instância dessa classe (`rectangle`) é utilizada para realizar cálculos e armazenar dados.
+
+2. **Encapsulamento**: Os membros de dados (`width` e `height`) da classe `Rectangle` foram declarados como públicos para simplificar o exemplo, mas em aplicações reais, é uma boa prática encapsular esses membros, tornando-os privados e fornecendo métodos públicos para acessá-los e modificá-los.
+
+3. **Métodos**: Os métodos na classe `Rectangle` (`area()`, `perimeter()`, `diagonal()`) realizam cálculos específicos com os dados do retângulo. Isso promove o reúso de código e a organização das funcionalidades.
+
+4. **Entrada de Dados**: O uso da classe `Scanner` para obter entrada do usuário via teclado.
+
+5. **Saída Formatada**: A formatação da saída usando o método `String.format()` para garantir que os resultados sejam exibidos de maneira clara e legível.
+
+6. **Utilização de Bibliotecas Padrão**: O uso da classe `Math` para calcular a diagonal do retângulo usando o teorema de Pitágoras (`Math.sqrt()`).
+
+7. **Padrões de Codificação**: A utilização de convenções de nomenclatura padrão (como camelCase para nomes de variáveis e métodos) e organização do código em blocos e métodos.
+
+### ➡️ Pasta Funcionarios
+
+Nesta aula, desenvolvemos um programa em Java para gerenciar informações de funcionários e calcular salários líquidos. Aqui está um resumo do que foi feito:
+
+1. **Configuração do Ambiente**: Utilizamos a classe `Locale` para configurar o local padrão para formatação de números decimais, garantindo consistência na exibição dos valores.
+
+2. **Entrada de Dados**: Utilizamos a classe `Scanner` para receber entrada do usuário via teclado, solicitando e armazenando informações como nome, salário bruto e imposto do funcionário.
+
+3. **Manipulação de Objetos**: Criamos uma classe `Employee` para representar um funcionário, com atributos para nome, salário bruto e imposto. Instanciamos um objeto dessa classe para armazenar os dados do funcionário.
+
+4. **Cálculo do Salário Líquido**: Implementamos um método na classe `Employee` para calcular o salário líquido do funcionário, subtraindo o valor do imposto do salário bruto.
+
+5. **Aumento de Salário**: Criamos um método na classe `Employee` para aumentar o salário do funcionário com base em uma porcentagem fornecida pelo usuário.
+
+6. **Saída Formatada**: Utilizamos o método `toString()` na classe `Employee` para formatar os dados do funcionário em uma string legível, incluindo o nome e o salário líquido.
+
+7. **Interatividade com o Usuário**: Solicitamos ao usuário uma porcentagem para aumentar o salário do funcionário e exibimos os dados atualizados do funcionário, incluindo o novo salário líquido.
+
+8. **Boas Práticas de Programação**: Utilizamos comentários para documentar o código e fechamos o objeto `Scanner` para evitar vazamentos de recursos.
+
+
+### ➡️ Pasta Alunos
+Nesta aula, desenvolvemos um programa em Java para calcular a nota final de um aluno e determinar se ele foi aprovado ou reprovado. Aqui está um resumo do que foi feito:
+
+1. **Configuração do Ambiente**: Utilizamos a classe `Locale` para configurar o local padrão como US, garantindo a formatação correta dos números decimais.
+
+2. **Entrada de Dados**: Utilizamos a classe `Scanner` para receber entrada do usuário via console, solicitando e armazenando o nome do aluno e suas três notas.
+
+3. **Manipulação de Objetos**: Criamos uma classe `Student` para representar um aluno, com atributos para nome e notas. Instanciamos um objeto dessa classe para armazenar os dados do aluno.
+
+4. **Cálculo da Nota Final**: Implementamos um método na classe `Student` para calcular a nota final do aluno, somando suas três notas.
+
+5. **Verificação de Aprovação**: Utilizamos o método `notaFinal()` para determinar se o aluno foi aprovado ou reprovado. Se a nota final for menor que 60, o aluno é considerado reprovado, caso contrário, é considerado aprovado.
+
+6. **Mensagens de Saída**: Exibimos a nota final do aluno e uma mensagem indicando se ele foi aprovado ou reprovado. Se reprovado, também exibimos a quantidade de pontos que faltam para atingir a nota mínima de aprovação.
+
+7. **Boas Práticas de Programação**: Utilizamos comentários para documentar o código e fechamos o objeto `Scanner` para evitar vazamentos de recursos.
+
+
