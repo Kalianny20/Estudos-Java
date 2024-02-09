@@ -31,9 +31,25 @@ public class Program {
         product.price = sc.nextDouble(); // Captura o preço do produto inserido pelo usuário
         System.out.print("Quantity in stock: ");
         product.quantity = sc.nextInt(); // Captura a quantidade em estoque do produto inserida pelo usuário
-        
-        // Exibe os detalhes do produto utilizando o método toString() da classe Product
-        System.out.println(product);
+
+        System.out.println();
+        System.out.println("Product data: " + product);
+
+        System.out.println();
+        System.out.print("Enter the number of products to be added in stock: ");
+        int quantity = sc.nextInt();
+        product.addProducts(quantity); // Adiciona a quantidade de produtos ao estoque
+
+        System.out.println();
+        System.out.println("Update data: " + product);
+
+        System.out.println();
+        System.out.print("Enter the number of products to be removed in stock: ");
+        quantity = sc.nextInt();
+        product.removeProducts(quantity); // Remove a quantidade de produtos do estoque
+
+        System.out.println();
+        System.out.println("Update data: " + product);
         
         // Fecha o objeto Scanner para liberar os recursos
         sc.close();
