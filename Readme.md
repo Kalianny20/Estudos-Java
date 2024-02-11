@@ -45,7 +45,7 @@ Hoje, como a demanda por software novo e mais poderoso está aumentando, constru
 
 </br> 
 
-<h2>🔗 Métodos e Classes</h2>
+<h2> 🔗 Métodos e Classes</h2>
 
 - **Classes:**
   - Em Java, as classes são a base da programação orientada a objetos (POO).
@@ -273,6 +273,105 @@ Nesta aula, desenvolvemos um programa em Java para calcular a nota final de um a
 
 6. **Mensagens de Saída**: Exibimos a nota final do aluno e uma mensagem indicando se ele foi aprovado ou reprovado. Se reprovado, também exibimos a quantidade de pontos que faltam para atingir a nota mínima de aprovação.
 
-7. **Boas Práticas de Programação**: Utilizamos comentários para documentar o código e fechamos o objeto `Scanner` para evitar vazamentos de recursos.
+7.  **Boas Práticas de Programação**: Utilizamos comentários para documentar o código e fechamos o objeto `Scanner` para evitar vazamentos de recursos.
+
+---
+</br>
+<h1 align="center"> 🍀 Dia 4 </h1>
+
+
+## 🔗  OBJETOS SÃO ACESSADOS POR REFERÊNCIAS
+
+Quando declaramos uma variável para associar a um objeto, na verdade, essa variável não guarda o
+objeto, mas, sim, uma maneira de acessá-lo, chamada de referência. É por esse motivo que, diferente dos tipos primitivos como int e long, precisamos dar `new` depois de declarada a variável:
+
+```java
+public static void main(String[] args) {
+    Conta c1;
+    c1 = new Conta();
+    Conta c2;
+    c2 = new Conta();
+}
+```
+
+O correto aqui é dizer que `c1` se refere a um objeto. Não é certo dizer que `c1` é um objeto, pois `c1` é uma variável referência, apesar de, depois de um tempo, os programadores Java falarem: "tenho um objeto `c` do tipo `Conta`" como um modo para encurtar a frase: "tenho uma referência `c` a um objeto do tipo `Conta`".
+
+Basta lembrar que, em Java, uma variável nunca é um objeto. Não há, no Java, uma maneira de criarmos o que é conhecido como objeto pilha ou objeto local, pois todo objeto, nessa linguagem, sem exceção, é acessado por uma variável referência.
+
+Esse código nos deixa na seguinte situação:
+
+```java
+Conta c1;
+c1 = new Conta();
+Conta c2;
+c2 = new Conta();
+```
+
+Internamente, `c1` e `c2` vão guardar um número que identifica em que posição da memória aquela `Conta` se encontra. Dessa maneira, ao utilizarmos o "." para navegar, o Java acessará a `Conta` que se encontra naquela posição de memória, e não uma outra.
+
+Para quem conhece, é parecido com um ponteiro. Porém, você não pode manipulá-lo como um número nem utilizá-lo para aritmética, pois ela é tipada.
+
+Um outro exemplo:
+
+```java
+class TestaReferencias {
+    public static void main(String[] args) {
+        Conta c1 = new Conta();
+        c1.deposita(100);
+        Conta c2 = c1; // linha importante!
+        c2.deposita(200);
+        System.out.println(c1.saldo);
+        System.out.println(c2.saldo);
+    }
+}
+```
+
+Qual é o resultado do código acima? O que aparece ao rodar?
+
+O que acontece aqui? O operador `=` copia o valor de uma variável. Mas qual é o valor da variável `c1`? É o objeto? Não. Na verdade, o valor guardado é a referência (endereço) ao local onde o objeto se encontra na memória principal.
+
+Na memória, o que acontece nesse caso:
+
+```java
+Conta c1 = new Conta();
+Conta c2 = c1;
+```
+
+Quando fizemos `c2 = c1`, `c2` passa, nesse instante, a fazer referência ao mesmo objeto referenciado por `c1`.
+
+Então, nesse código em específico, quando utilizamos `c1` ou `c2`, estamos nos referindo exatamente ao mesmo objeto! Elas são duas referências distintas, porém apontam para o mesmo objeto. Compará-las com `==` irá nos retornar `true`, pois o valor que elas carregam é o mesmo!
+
+Outra forma de perceber isso é que demos apenas um `new`, logo só pode haver um objeto `Conta` na memória.
+
+Atenção: não estamos discutindo aqui a utilidade de fazer uma referência apontar para o mesmo objeto que outra. Essa utilidade ficará mais evidente quando passarmos variáveis do tipo referência como argumento a métodos.
+
+## 🔗 NEW
+
+O que exatamente faz o `new`?
+
+O `new` executa uma série de tarefas que veremos mais adiante.
+
+Mas, a fim de melhor entender as referências no Java, imagine que o `new`, depois de alocar a memória para esse objeto, devolve uma flecha, isto é, um valor de referência. Quando você atribui isso a uma variável, essa variável passa a se referir a esse mesmo objeto.
+
+Podemos, então, ver outra situação:
+
+```java
+public static void main(String[] args) {
+    Conta c1 = new Conta();
+    c1.titular = "Duke";
+    c1.saldo = 227;
+    Conta c2 = new Conta();
+    c2.titular = "Duke";
+    c2.saldo = 227;
+    if (c1 == c2) {
+        System.out.println("Contas iguais");
+    }
+}
+```
+
+O operador `==` compara o conteúdo das variáveis, mas essas variáveis não guardam o objeto, e sim o endereço em que ele se encontra. Como em cada uma dessas variáveis guardamos duas contas criadas diferentemente, elas estão em espaços distintos da memória, o que faz o teste `if` valer `false`. As contas podem ser equivalentes no nosso critério de igualdade, porém elas não são o mesmo objeto.
+
+Quando se trata de objetos, pode ficar mais fácil pensar que o `==` compara se os objetos (referências, na verdade) são o mesmo, e não se são iguais. Para saber se dois objetos têm o mesmo conteúdo, você precisa comparar atributo por atributo. Veremos uma solução mais elegante para isso também.
+
 
 
