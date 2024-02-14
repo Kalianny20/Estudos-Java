@@ -373,6 +373,8 @@ O operador `==` compara o conteúdo das variáveis, mas essas variáveis não gu
 
 Quando se trata de objetos, pode ficar mais fácil pensar que o `==` compara se os objetos (referências, na verdade) são o mesmo, e não se são iguais. Para saber se dois objetos têm o mesmo conteúdo, você precisa comparar atributo por atributo. Veremos uma solução mais elegante para isso também.
 
+</br>
+
 <h1 align="center"> 🍀 Dia 5 </h1>
 
 ##  🔗  Membros estáticos
@@ -385,15 +387,27 @@ Quando se trata de objetos, pode ficar mais fácil pensar que o `==` compara se 
   - Declaração de constantes
 - Uma classe que possui somente membros estáticos, pode ser uma classe estática também. Esta classe não poderá ser instanciada
 
-Problema exemplo:
+Vamos simplificar. Pense em uma classe como uma receita para criar objetos. Os membros são as "partes" dessa receita: variáveis e métodos.
+
+Agora, considere que você tem uma classe chamada `Carro`. Esta classe tem membros, como `cor` e `velocidadeMaxima`. Quando você cria um objeto dessa classe, como `meuCarro`, ele terá sua própria cor e velocidade máxima.
+
+Mas, às vezes, você tem algo relacionado à classe como um todo, não a uma instância específica. Por exemplo, você pode querer saber a quantidade total de carros criados, ou uma funcionalidade que não dependa de um carro em particular.
+
+Aqui é onde entram os membros estáticos. Eles são membros da classe em si, não de uma instância específica. Assim, todos os objetos da classe compartilham o mesmo valor para um membro estático.
+
+Por exemplo, digamos que você queira saber a quantidade total de carros criados. Em vez de rastrear isso individualmente para cada carro, você pode ter um membro estático na classe `Carro`, chamado `quantidadeTotalDeCarros`.
+
+Essa é uma maneira de ver membros estáticos: como pertencendo à classe em si, em vez de a instâncias individuais dessa classe. Isso significa que você pode acessá-los sem precisar criar um objeto da classe.
+ 
+<h3> Problema exemplo:</h3>
 Fazer um programa para ler um valor numérico qualquer, e daí mostrar quanto seria o valor de uma circunferência e do volume de uma esfera para um raio daquele valor. Informar também o valor de PI com duas casas decimais.
 
-Checklist:
 - Versão 1: métodos na própria classe do programa
   - Nota: dentro de um método estático você não pode chamar membros de instância da mesma classe.
 - Versão 2: classe Calculator com membros de instância
 - Versão 3: classe Calculator com método estático
 
+VERSÃO 1
 ```java
 package application;
 import java.util.Locale;
@@ -422,6 +436,7 @@ public class Program {
 
 ```
 
+VERSÃO 2
 ```java
 package util;
 public class Calculator {
@@ -434,8 +449,6 @@ public class Calculator {
     }
 }
 ```
-
-VERSÃO 2
 ```java
 Calculator calc = new Calculator();
 System.out.print("Enter radius: ");
